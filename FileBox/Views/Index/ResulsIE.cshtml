@@ -1,0 +1,29 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+@{
+    Layout = "Views/Shared/Layout.cshtml";
+}
+@section Header{
+    <script src="@Url.Content("~/Content/js/libs/mdc.js")"></script>
+    <script src="@Url.Content("~/Content/js/libs/jquery.zclip.min.js")"></script>
+    <script type="text/javascript">
+        var urlZClip = "@Url.Content("~/Content/ZeroClipboard.swf")";
+        var urlTemplates = '@Url.Content("~/templates/")';
+        var url = '@Url.Content("~/files")';
+        var uploadedMessage = "@Text.Text.UploadedMessage";
+        $("a.btn").zclip({
+            path: urlZClip,
+            afterCopy: function () {
+            },
+            copy: function () {
+                return $(this).prev().val();
+            }
+        });
+    </script>
+}
+
+
+<span>@Text.Text.FullUploadedMessage</span>
+<br />
+<input type="text"  readonly="readonly" class="form-control input-lg" value="@Model.Url" />
+<a href="#" class="btn btn-success">@Text.Text.CopyClipboard</a>
+

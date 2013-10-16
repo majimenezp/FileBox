@@ -1,0 +1,25 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+<div class="uploadBox">
+  <input id="fileupload" type="file" name="files[]" multiple="multiple"/>
+  <label for="fileupload" data-title="Drops files here or click to choose" onclick="clickIe(this);">
+    <span class="glyphicon glyphicon-upload"></span>
+    <br />
+    <span class="textinfo" data-title="No file...">
+      @Text.Text.AddFiles
+    </span>
+  </label>
+</div>
+
+<div class="popover-content" id="file-list">
+  <div class="no-data">
+    <em>@Text.Text.NoFiles</em>
+  </div>
+</div>
+<footer class="hidden">
+  <button class="btn btn-warning pull-right" id="cancel-uploads-button">
+    <i class="icon-cancel"></i>Cancel uploads
+  </button>
+  <button class="btn btn-primary" id="start-uploads-button">
+    <i class="icon-start"></i>Start uploads
+  </button>
+</footer>

@@ -1,0 +1,48 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filebox:Upload and share your files</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="@Url.Content("~/Content/css/bootstrap.min.css")" rel="stylesheet" media="screen">
+    <link href="@Url.Content("~/Content/css/style.css")" rel="stylesheet" media="screen">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="@Url.Content("~/Content/js/libs/html5shiv.js")"></script>
+      <script src="@Url.Content("~/Content/js/libs/respond.min.js")"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="@Url.Content("~/")">FileBox</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="starter-template">
+            @*<h1>Bootstrap starter template</h1>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>*@
+            @RenderBody()
+        </div>
+    </div>
+    <!-- /.container -->
+    <script src="@Url.Content("~/Content/js/libs/jquery-1.10.2.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/libs/bootstrap.min.js")"></script>
+    @RenderSection("templates", false)
+    @RenderSection("Header", false)
+</body>
+</html>

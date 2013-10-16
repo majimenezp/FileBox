@@ -1,0 +1,61 @@
+﻿@charset "UTF-8";
+
+body {
+    padding-top: 60px;
+}
+
+.ng-cloak {
+    display: none;
+}
+
+
+.uploadBox {
+    vertical-align: middle;
+}
+
+    .uploadBox input {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .uploadBox label {
+        display: block;
+        top: 0;
+        left: 0;
+        height: 200px;
+        vertical-align: middle;
+        text-align: center;
+        background-color: #fff;
+        border: 1px dashed gray;
+        border-radius: 4px;
+        cursor: pointer;
+        -webkit-box-shadow: 0 0 0 4px rgba(0,0,0,0.06);
+        -moz-box-shadow: 0 0 0 4px rgba(0,0,0,0.06);
+        box-shadow: 0 0 0 4px rgba(0,0,0,0.06);
+        -webkit-transition: all .15s;
+        -moz-transition: all .15s;
+        -o-transition: all .15s;
+        transition: all .15s;
+        content: attr(data-title);
+    }
+
+        .uploadBox label .glyphicon {
+            font-size: 72px;
+        }
+
+        .uploadBox label > span {
+            text-align: center;
+        }
+
+            .uploadBox label > span.textinfo {
+                color: gray;
+                font-size: 3em;
+            }
+
+.inputLink {
+    width: 300px;
+}
+.fileUrl {
+    padding:1px;
+    width:100%;
+}

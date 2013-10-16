@@ -1,0 +1,21 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+<div class="col-sm-7">
+    <span class="name"><%= name %></span>
+    <div class="fileLink hidden">
+        <input type="text" value="" readonly="readonly" class="fileUrl" />
+        <a href="#" class="btn btn-success">@Text.Text.CopyClipboard</a>
+    </div>
+</div>
+<div class="col-sm-3">
+        <span class="size"><%= displaySize(size) %></span>
+    <div class="progress progress-striped hidden">
+        <div class="progress-label"></div>
+        <span class="progress-bar progress-bar-success bar" role="progressbar"></span>
+    </div>
+    <span class="message hidden">
+    </span>
+</div>
+<div class="col-sm-2">
+    <button class="btn btn-warning btn-small" id="btn-cancel"><i class="icon-remove"></i>@Text.Text.Cancel</button>
+    <button class="btn btn-small hidden" id="btn-clear">Clear</button>
+</div>
